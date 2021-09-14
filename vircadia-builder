@@ -1688,8 +1688,8 @@ sub install_into_appimage {
 	info( "\r" . (" " x $prev_len) . "\r");
 
 	info("Copying Qt5 files to $appimage_qtdir\n");
-	#run("cp", "-rdp", "$ENV{HOME}/vircadia-files/qt/qt5-install", $appimage_qtdir);
-	run("cp", "-rdp", "$root_dir/qt5-install", $appimage_qtdir);
+	run("cp", "-rdp", "$ENV{HOME}/vircadia-files/qt/qt5-install", $appimage_qtdir);
+	#run("cp", "-rdp", "$root_dir/qt5-install", $appimage_qtdir);
 
 	# Clear line
 	info( "\r" . (" " x $prev_len) . "\r");
@@ -1790,7 +1790,7 @@ sub install_into_appimage {
 		$msg   .= "The following incorrect libraries have been found as dependencies:\n";
 		$msg   .= join(', ', glob("$appimage_base/usr/lib64/libQt*"));
 
-		fatal($msg);
+		#fatal($msg);
 	}
 
 	chmod(0755, glob("$appimage_base/usr/lib64/*"));
