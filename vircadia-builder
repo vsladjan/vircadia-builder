@@ -1688,8 +1688,8 @@ sub install_into_appimage {
 	info( "\r" . (" " x $prev_len) . "\r");
 
 	info("Copying Qt5 files to $appimage_qtdir\n");
-	run("cp", "-rdp", "$ENV{HOME}/vircadia-files/qt/qt5-install", $appimage_qtdir);
-	#run("cp", "-rdp", "$root_dir/qt5-install", $appimage_qtdir);
+	#run("cp", "-rdp", "$ENV{HOME}/vircadia-files/qt/qt5-install", $appimage_qtdir);
+	run("cp", "-rdp", "$root_dir/qt5-install", $appimage_qtdir);
 
 	# Clear line
 	info( "\r" . (" " x $prev_len) . "\r");
